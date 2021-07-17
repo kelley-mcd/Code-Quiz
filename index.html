@@ -6,17 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kelley's Code Quiz</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="style sheet" href="style.css">
-    <script src="./script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    <h1>Do You Want To Test Your Coding Skills?</h1>
-    <div class="game container-fluid ">
-        <button class="playBtn" id= "Play">Play</button>
-        <button class="highScoresBtn">High Scores</button>
+    <div id="container">
+        <div id="start">Start Quiz!</div>
+        <div id="quiz" style="display: none">
+            <div id="question"></div>
+            <div id="qImg"></div>
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+            </div>
+            <div id="timer">
+                <div id="counter"></div>
+                <div id="btimeGauge"></div>
+                <div id="timeGauge"></div>
+            </div>
+            <div id="progress"></div>
+        </div>
+        <div id="scoreContainer" style="display: none"></div>
     </div>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
